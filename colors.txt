@@ -1,3 +1,4 @@
 bg -> #2f3338
 text -> #8f8d82
 text highlighted -> #D6D2BC
+nav-controls-bg -> #3A3C3D

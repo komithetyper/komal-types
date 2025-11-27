@@ -1,25 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 
 :root {
   --color-bg: #2f3338;
   --color-text: #8f8d82;
-  --color-text-highlight: #D6D2BC;
+  --color-text-highlight: #d6d2bc;
+  --color-nav-controls-bg: #3a3c3d;
 }
 
-*{
+* {
+  /* border: 1px solid pink; */
+
   box-sizing: border-box;
   margin: 0;
   padding: 0px;
-}
-
-body {
   font-family: "Roboto Mono", monospace;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-
-  background-color: var(--color-bg);
   color: var(--color-text);
+}
 
+body {
+  background-color: var(--color-bg);
   padding: 1rem 4rem 0rem 4rem;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+button:hover,
+button:active {
+  color: var(--color-text-highlight);
+}
+
+.seperator{
+  background: #2F3338;
+  border-radius: 10px;
+  width: 6px;
+  margin: 0px 10px;
+}
+
+
+/* overriding global active state here */
+/* handle with very care, as used common property */
+/* in future, would segragate this for each specific instance */
+.active {
+  color: var(--color-text-highlight);
 }
