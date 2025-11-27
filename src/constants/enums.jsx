@@ -16,4 +16,3 @@ export const WordModeCount = Object.freeze({
   SEVENTY_FIVE: 75,
   HUNDRED: 100,
 });
-

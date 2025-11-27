@@ -5,6 +5,6 @@ import wordSlice from "../slices/wordSlice";
 export const store = configureStore({
   reducer: {
     navControlsSlice: navControlsReducer,
-    wordSlice: wordSlice
+    wordSlice: wordSlice,
   },
 });

@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 
 const initialState = {
   // array of words, each word is a string
-  wordList : generate({ exactly: 50, maxLength: 7 }),
+  wordList: generate({ exactly: 50, maxLength: 7 }),
 };
 
 const wordSlice = createSlice({
@@ -18,10 +18,10 @@ const wordSlice = createSlice({
 
     setWordListFromCount(state, action) {
       const wordCount = action.payload;
-      if (typeof wordCount === 'number' && wordCount > 0) {
+      if (typeof wordCount === "number" && wordCount > 0) {
         state.wordList = generate({ exactly: wordCount, maxLength: 7 });
       }
-    }
+    },
   },
 });
 

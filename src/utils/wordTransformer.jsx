@@ -4,7 +4,7 @@ import React from "react";
 
 function transformWordsToElements() {
   const wordList = ["Hello", "Word", "What", "Are", "You", "Doing", "Today"];
-  return 
+  return;
 }
 
 export default transformWordsToElements;

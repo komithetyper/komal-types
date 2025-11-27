@@ -36,11 +36,8 @@ const navControlsSlice = createSlice({
   },
 });
 
-export const {
-  setNavControlMode,
-  setTimeModeDuration,
-  setWordModeCount,
-} = navControlsSlice.actions;
+export const { setNavControlMode, setTimeModeDuration, setWordModeCount } =
+  navControlsSlice.actions;
 
 // Selectors
 export const getNavControlMode = (state) =>
