@@ -49,3 +49,10 @@ button:active {
 .active {
   color: var(--color-text-highlight);
 }
+
+#root {
+  height: 97vh;
+  display: flex;
+  flex-direction: column;
+}
+

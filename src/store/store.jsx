@@ -1,8 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import navControlsReducer from "../slices/navcontrols";
+import navControlsReducer from "../slices/navcontrolsSlice";
+import wordSlice from "../slices/wordSlice";
 
 export const store = configureStore({
   reducer: {
-    navControls: navControlsReducer,
+    navControlsSlice: navControlsReducer,
+    wordSlice: wordSlice
   },
 });

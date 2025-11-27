@@ -12,11 +12,10 @@ const initialState = {
 };
 
 const navControlsSlice = createSlice({
-  name: "navControls",
+  name: "navControlsSlice",
   initialState,
   reducers: {
     setNavControlMode(state, action) {
-      console.log("Setting nav control mode to:", action.payload);
       const mode = action.payload;
       if (mode === NavControlsMode.TIME || mode === NavControlsMode.WORD) {
         state.mode = mode;
@@ -45,12 +44,12 @@ export const {
 
 // Selectors
 export const getNavControlMode = (state) =>
-  state.navControls?.mode ?? initialState.mode;
+  state.navControlsSlice?.mode ?? initialState.mode;
 
 export const getTimeModeDuration = (state) =>
-  state.navControls?.timeModeDuration ?? initialState.timeModeDuration;
+  state.navControlsSlice?.timeModeDuration ?? initialState.timeModeDuration;
 
 export const getWordModeCount = (state) =>
-  state.navControls?.wordModeCount ?? initialState.wordModeCount;
+  state.navControlsSlice?.wordModeCount ?? initialState.wordModeCount;
 
 export default navControlsSlice.reducer;

@@ -15,7 +15,8 @@ import {
   getWordModeCount,
   setTimeModeDuration,
   setWordModeCount,
-} from "../slices/navcontrols";
+} from "../slices/navcontrolsSlice";
+import { setWordList, setWordListFromCount } from "../slices/wordSlice";
 
 function Navbar() {
   const mode = useSelector(getNavControlMode);
@@ -26,7 +27,7 @@ function Navbar() {
   return (
     <header>
       <nav>
-        <div className="logo">RapidType</div>
+        <Link to={"/"} className="logo">RapidType</Link>
 
         <div className="links">
           <Link className="link">
@@ -43,7 +44,10 @@ function Navbar() {
         <div className="nav-controls">
           <div className="mode">
             <button
-              onClick={() => dispatch(setNavControlMode(NavControlsMode.TIME))}
+              onClick={() => {
+                dispatch(setNavControlMode(NavControlsMode.TIME));
+                dispatch(setWordList());
+              }}
               className={`time ${
                 mode === NavControlsMode.TIME ? "active" : ""
               }`}
@@ -70,7 +74,10 @@ function Navbar() {
                   <button
                     key={duration}
                     className={duration === timeModeDuration ? "active" : ""}
-                    onClick={() => dispatch(setTimeModeDuration(duration))}
+                    onClick={() => {
+                      dispatch(setTimeModeDuration(duration));
+                      dispatch(setWordList())
+                    }}
                   >
                     {duration}
                   </button>
@@ -84,7 +91,10 @@ function Navbar() {
                   <button
                     key={count}
                     className={count === wordModeCount ? "active" : ""}
-                    onClick={() => dispatch(setWordModeCount(count))}
+                    onClick={() => {
+                      dispatch(setWordModeCount(count));
+                      dispatch(setWordListFromCount(count));
+                    }}
                   >
                     {count}
                   </button>

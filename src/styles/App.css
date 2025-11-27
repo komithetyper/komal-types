@@ -1,0 +1,8 @@
+header {
+  flex-shrink: 0;   /* Prevent shrinking */
+}
+
+.routes-container {
+  flex: 1;          /* Fills remaining height */
+  overflow-y: auto; /* Optional: scroll inside routes */
+}

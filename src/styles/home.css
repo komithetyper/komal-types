@@ -1,0 +1,35 @@
+.home-page {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 40px 0px;
+}
+
+/* test-base */
+.home-page .text-base {
+      padding: 0px 8rem;
+      font-size: 1.8rem;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 7px 25px;
+      font-weight: 800 !important;
+}
+
+.home-page .text-base .word .letter {
+      color: var(--color-text-highlight);
+}
+
+.restart-test img {
+      max-height: 30px;
+      width: auto;
+      filter: invert(0.5);
+
+}
+
+.restart-test img:hover {
+      cursor: pointer;
+      filter: invert(0.8);
+}
